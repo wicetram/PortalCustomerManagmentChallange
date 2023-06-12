@@ -1,0 +1,39 @@
+﻿@model Customer
+
+<form asp-controller="Customer" asp-action="AddCustomer" method="post" class="form">
+    <div class="form-group">
+        <label for="Name">Ad:</label>
+        <input type="text" id="Name" name="Name" value="@Model.Name" required class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="Surname">Soyad:</label>
+        <input type="text" id="Surname" name="Surname" value="@Model.Surname" required class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="BirthYear">Doğum Yılı:</label>
+        <input type="text" id="BirthYear" name="BirthYear" value="@Model.BirthYear" required class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="Email">Email:</label>
+        <input type="email" id="Email" name="Email" value="@Model.Email" required class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="Password">Şifre:</label>
+        <input type="password" id="Password" name="Password" value="@Model.Password" required class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="TCKN">TCKN:</label>
+        <input type="text" id="TCKN" name="TCKN" value="@Model.TCKN" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="IncludeTCKN">TCKN Dahil Et:</label>
+        <select id="IncludeTCKN" name="TCKNCheck" class="form-control">
+            <option value="true">Kontrol Et</option>
+            <option value="false">Kontrol Etme</option>
+        </select>
+    </div>
+    <br />
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+    </div>
+</form>
